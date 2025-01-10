@@ -329,6 +329,12 @@ html, body {
 }
 body {
     font-family: 'Pretendard';
-    color: #333;
+    color: #fff;
     background-color: #000;
+    transition: 0.7s;
+}
+body.on {
+    background-color: #fff;
+    color: #333;
+    transition: 0.7s;
 }

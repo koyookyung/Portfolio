@@ -5,43 +5,40 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
-    <link rel="stylesheet" href="lib/dist/fullpage.css">
+    
     <link rel="stylesheet" href="css/style.css">
-    <script src="lib/dist/fullpage.js"></script>
+    <script src="lib/jquery-3.7.1.min.js"></script>
     <script>
         $(function () {
 
-            //header
-            console.log($('.About').offset().top)
-            $(window).scroll(function () {
-            });//window.scroll()
+            //header & body
+            let sectionTop = $('.about').offset().top;
+            let navBar = $('.header .nav li')
+            $(window).scroll(function(){
+                let scrollBar = $(window).scrollTop();
+                console.log(scrollBar)
 
-            //title
-            
+                if(scrollBar > sectionTop - 100) {
+                    $('body').addClass('on');
+                    $('.header').addClass('on');
+                } else if (scrollBar < sectionTop ) {
+                    $('body').removeClass('on');
+                    $('.header').removeClass('on')
+                }
+            });//scroll()
+
+            let skillIcon = $('.skill .icon li');
+            let skillText = $('.skill .text li');
+
+            $(skillIcon).mouseenter(function(){
+                $(skillText).removeClass('on')
+                $(skillText).eq($(this).index()).addClass('on')
+            });
         });//script end
     </script>
 </head>
 
 <body>
-    <header class="header pc">
-        <div class="inner">
-            <h1 class="logo">
-                <a href="#">
-                    <img src="img/logo.png" alt="logo">
-                </a>
-            </h1><!-- .logo end -->
-            <nav class="nav">
-                <ul class="gnb">
-                    <li><a href="#Intro">Intro</a></li>
-                    <li class="active"><a href="#About">About</a></li>
-                    <li><a href="#Project">Project</a></li>
-                    <li><a href="#Design">Design</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </nav><!-- .nav end -->
-        </div><!-- .inner end -->
-    </header><!-- .header pc end -->
-
     <main>
         <div class="intro">
             <div class="inner">
@@ -75,9 +72,109 @@
         </div><!-- .intro end -->
     </main>
 
-    <div class="about">
-        
-    </div><!-- .about end -->
+    <section>
+        <header class="header pc">
+            <div class="inner">
+                <h1 class="logo">
+                    <a href="#">
+                        <img src="img/logo.png" alt="logo">
+                    </a>
+                </h1><!-- .logo end -->
+                <nav class="nav">
+                    <ul class="gnb">
+                        <li><a href="#Intro">Intro</a></li>
+                        <li class="active"><a href="#About">About</a></li>
+                        <li><a href="#Project">Project</a></li>
+                        <li><a href="#Design">Design</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </nav><!-- .nav end -->
+            </div><!-- .inner end -->
+        </header><!-- .header pc end -->
+
+        <div class="about">
+            <div class="inner">
+                <div class="deta">
+                    <div class="image"></div><!-- .image end -->
+                    <div class="text">
+                        <ul>
+                            <li>
+                                <span>NAME</span>
+                                <span>고유경</span>
+                            </li>
+                            <li>
+                                <span>BIRTH</span>
+                                <span>2001.05.14</span>
+                            </li>
+                            <li>
+                                <span>PHONE</span>
+                                <span>010-3436-4171</span>
+                            </li>
+                            <li>
+                                <span>E-MAIL</span>
+                                <span>rrrrr514@naver.com</span>
+                            </li>
+                        </ul>
+                    </div><!-- .text end -->
+                </div><!-- .deta end -->
+                <div class="info">
+                    <div class="certificate">
+                        <h2>CERTIFICATE</h2>
+                        <ul>
+                            <li>
+                                <span>웹디자인기능사</span>
+                                <span>2024.12 한국산업인력공단</span>
+                            </li>
+                        </ul>
+                    </div><!-- .certificate end -->
+                    <div class="education">
+                        <h2>EDUCATION</h2>
+                        <ul>
+                            <li>
+                                <span>그린컴퓨터아카데미 UX/UI 반응형 웹디자인&웹퍼블리셔 양성과정</span>
+                                <span>수료 2024.08 ~ 2025.01</span>
+                            </li>
+                            <li>
+                                <span>제주한라대학교 유아교육과 </span>
+                                <span>졸업 2020.03 ~ 2023.02</span>
+                            </li>
+                            <li>
+                                <span>신성여자고등학교 </span>
+                                <span>졸업 2017.03 ~ 2020.02</span>
+                            </li>
+                        </ul>
+                    </div><!-- .education end -->
+                    <div class="skill">
+                        <h2>SKILL</h2>
+                        <ul class="icon">
+                            <li><img src="img/02_about/01_html.png" alt="html"></li>
+                            <li><img src="img/02_about/02_css.png" alt="css"></li>
+                            <li><img src="img/02_about/03_js.png" alt="js"></li>
+                            <li><img src="img/02_about/04_jquery.png" alt="jquery"></li>
+                            <li><img src="img/02_about/05_photoshop.png" alt="photoshop"></li>
+                            <li><img src="img/02_about/06_illustrator.png" alt="illustrator"></li>
+                            <li><img src="img/02_about/07_figma.png" alt="figma"></li>
+                            <li><img src="img/02_about/08_react.png" alt="react"></li>
+                            <li><img src="img/02_about/09_visualstudio.png" alt="visualstudio"></li>
+                            <li><img src="img/02_about/10_github.png" alt="github"></li>
+                        </ul>
+                        <ul class="text">
+                            <li>다양한 디바이스에 최적화된 레이아웃 설계와 코드 작성이 가능합니다.</li>
+                            <li>HTML로 마크업한 문서의 레이아웃과 스타일을 정의가 가능합니다.</li>
+                            <li>클릭, 스크롤 등 브라우저 동작에 반응하는 인터랙티브 기능 구현이 가능합니다.</li>
+                            <li>애니메이션 효과 등을 통해 동적인 웹사이트 구현이 가능합니다.</li>
+                            <li>이미지 편집과 그리드를 활용한 웹사이트 시안 제작이 가능합니다.</li>
+                            <li>로고 제작 및 그래픽 디자인 작업이 가능합니다.</li>
+                            <li>다양한 디바이스 환경에 맞춘 UI/UX 프로토타입 제작이 가능합니다.</li>
+                            <li>컴포넌트 기반의 동적 웹사이트를 구조화할 수 있습니다.</li>
+                            <li>코드를 편집과 효율적인 Git 작업이 가능합니다. </li>
+                            <li>효율적인 협업 관리 및 배포가 가능합니다.</li>
+                        </ul>
+                    </div><!-- .skill end -->
+                </div><!-- .info end -->
+            </div><!-- .inner end -->
+        </div><!-- .about end -->
+    </section>
 </body>
 
 </html>

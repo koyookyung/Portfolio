@@ -1,41 +1,6 @@
 @charset "utf-8";
 @import url('reset.css');
 
-/* header */
-.header {
-    width: 100%;
-    position: fixed;
-    left: 0;
-    top: 0;
-    z-index: 999;
-    background-color:rgba(255, 255, 255, 0.5);
-    backdrop-filter: blur(5px);
-    display: none;
-}
-.header .inner {
-    width: calc(100% - 20rem);
-    height: 8rem;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-.header .inner .logo {
-    width: 6.5rem;
-}
-.header .inner .logo img {
-    width: 100%;
-}
-.header .inner .nav .gnb {
-    display: flex; 
-    gap: 5rem;
-    font-size: 2.5rem;
-}
-.header .inner .nav .gnb li.active {
-    width: 100%;
-    border-bottom: 3px solid #333;  
-}
-
 /* intro */
 .intro {
     width: 100%;
@@ -70,6 +35,18 @@
     width: 100%;
     display: flex;
     justify-content: center;
+    opacity: 0;
+    animation: title 1s ease-in-out forwards 0s;
+}
+@keyframes title {
+    0% {
+        transform: translateY(-30rem);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
 }
 .intro .inner .tit .tit_wrap ul {
     display: flex;
@@ -135,4 +112,163 @@
     100% {
         transform: translateY(0);
     }
+}
+
+/* header */
+.header {
+    width: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 999;
+    background-color:rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(5px);
+    display: none;
+}
+.header.on {
+    display: block;
+}
+.header .inner {
+    width: calc(100% - 20rem);
+    height: 8rem;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.header .inner .logo {
+    width: 6.5rem;
+}
+.header .inner .logo img {
+    width: 100%;
+}
+.header .inner .nav .gnb {
+    display: flex; 
+    gap: 5rem;
+    font-size: 2.5rem;
+}
+.header .inner .nav .gnb li.active {
+    width: 100%;
+    border-bottom: 3px solid #333;  
+}
+
+/* about */
+.about {
+    width: 100%;
+    margin-top: 18rem;
+}
+.about .inner {
+    max-width: 150.4rem;
+    margin: 0 auto;
+    display: flex;
+    justify-content: flex-start;
+    gap: 12.5rem;
+}
+.about .inner .deta {
+     width: 33%;
+}
+.about .inner .deta .image {
+    max-width: 35.2rem;
+    width: 23.04vw;
+    max-height: 45.2rem;
+    height: 30.05vw;
+    background-color: #999;
+}
+.about .inner .deta .text {
+    width: 100%;
+    margin-top: 7rem;
+}
+.about .inner .deta .text ul {
+    font-size: 20px;
+}
+.about .inner .deta .text ul  li {
+    display: flex;
+    margin-bottom: 10px;
+}
+.about .inner .deta .text ul > li > span:nth-child(1) {
+    width: 9.6rem;
+    font-weight: 600;
+    margin-right: 10px;
+}
+.about .inner .info {
+    width: 65%;
+    display: flex;
+    flex-direction: column;
+    gap: 8rem;
+}
+.about .inner .info h2 {
+    font-size: 3rem;
+    margin-bottom: 4rem;
+    font-weight: 600;
+}
+.about .inner .info .certificate ul {
+    border-left: 5px solid #ddd;
+    padding-left: 3.5rem;
+}
+.about .inner .info .certificate ul li {
+    display: flex;
+    align-items: center;
+}
+.about .inner .info .certificate ul li span:nth-child(1) {
+    font-size: 20px;
+    margin-right: 10px;
+    font-weight: 500;
+}
+.about .inner .info .certificate ul li span:nth-child(2) {
+    font-size: 18px;
+    color: #999;
+}
+.about .inner .info .education ul {
+    border-left: 5px solid #ddd;
+    padding-left: 3.5rem;
+}
+.about .inner .info .education ul li {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+.about .inner .info .education ul li span:nth-child(1) {
+    font-size: 20px;
+    margin-right: 10px;
+    font-weight: 500;
+}
+.about .inner .info .education ul li span:nth-child(2) {
+    font-size: 18px;
+    color: #999;
+}
+.about .inner .info .skill h2 {
+    position: relative;
+}
+.about .inner .info .skill h2::after {
+    content: '아이콘에 마우스를 올려보세요.';
+    font-size: 16px;
+    font-weight: normal;
+    color: #999;
+    position: absolute;
+    left: 10rem;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.about .inner .info .skill .icon {
+    display: flex;
+    gap: 25px;
+}
+.about .inner .info .skill .icon li {
+    width: 5rem;
+    height: 5rem;
+}
+.about .inner .info .skill .icon li img {
+    width: 100%;
+    height: 100%;
+}
+.about .inner .info .skill .text {
+    margin-top: 20px;
+    font-size: 16px;
+    color: #999;
+}
+.about .inner .info .skill .text li {
+    display: none;
+}
+.about .inner .info .skill .text li.on {
+    display: block;
 }
