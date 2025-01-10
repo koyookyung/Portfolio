@@ -1,0 +1,138 @@
+@charset "utf-8";
+@import url('reset.css');
+
+/* header */
+.header {
+    width: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 999;
+    background-color:rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(5px);
+    display: none;
+}
+.header .inner {
+    width: calc(100% - 20rem);
+    height: 8rem;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.header .inner .logo {
+    width: 6.5rem;
+}
+.header .inner .logo img {
+    width: 100%;
+}
+.header .inner .nav .gnb {
+    display: flex; 
+    gap: 5rem;
+    font-size: 2.5rem;
+}
+.header .inner .nav .gnb li.active {
+    width: 100%;
+    border-bottom: 3px solid #333;  
+}
+
+/* intro */
+.intro {
+    width: 100%;
+    height: 100vh;
+    color: #fff;
+}
+.intro .inner {
+    width: calc(100% - 20rem);
+    height: 100%;
+    margin: 0 auto;
+    position: relative;
+}
+.intro .inner .text {
+    font-family: 'Noto Sans';
+    font-size: 2rem;
+    padding-top: 5rem;
+}
+.intro .inner .text ul {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.intro .inner .tit {
+    font-family: 'WAGURI TTF';
+    font-size: 14vw;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+.intro .inner .tit .tit_wrap {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.intro .inner .tit .tit_wrap ul {
+    display: flex;
+}
+.intro .inner .tit .tit_wrap ul .p {
+    padding-right: 9vw;
+    position: relative;
+}
+.intro .inner .tit .tit_wrap ul .p::before {
+    content: '';
+    background: url('../img/01_intro/title-01.png') center center / 100% no-repeat;
+    width: 14vw;
+    height: 15vw;
+    position: absolute;
+    right: -15%;
+    bottom: 5%;
+}
+.intro .inner .tit .tit_wrap ul .f {
+    padding-right: 9vw;
+    position: relative;
+}
+.intro .inner .tit .tit_wrap ul .f::before {
+    content: '';
+    background: url('../img/01_intro/title-02.png') center center / 100% no-repeat;
+    width: 13vw;
+    height: 15vw;
+    position: absolute;
+    right: -10%;
+    bottom: 5%;
+}
+.intro .inner .tit .tit_wrap ul .i {
+    position: relative;
+    padding-right: 12vw;
+}
+.intro .inner .tit .tit_wrap ul .i::before {
+    content: '';
+    background: url('../img/01_intro/title-03.png') center center / 100% no-repeat;
+    width: 12vw;
+    height: 15vw;
+    position: absolute;
+    right: 12%;
+    bottom: 5%;
+}
+.intro .inner .scroll {
+    position: absolute;
+    left: 50%;
+    bottom: 5rem;
+    transform: translate(0, -50%);
+    animation: scroll 2s linear infinite;
+}
+.intro .inner .scroll .scroll_btn {
+    background-color: transparent;
+    border: 0;
+    cursor: pointer;
+}
+@keyframes scroll {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(50%);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
