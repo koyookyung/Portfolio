@@ -322,7 +322,6 @@ li {
 a {
     text-decoration: none;
     color: inherit;
-    display: block;
 }
 html, body {
     font-size: 62.5%;
