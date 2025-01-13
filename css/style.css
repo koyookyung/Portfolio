@@ -9,7 +9,7 @@
 }
 
 .intro .inner {
-    width: calc(100% - 20rem);
+    width: calc(100% - 6rem);
     height: 100%;
     margin: 0 auto;
     position: relative;
@@ -146,8 +146,9 @@
     display: none;
     transition: 0.7s;
 }
+
 .header .inner {
-    width: calc(100% - 20rem);
+    width: calc(100% - 6rem);
     height: 8rem;
     margin: 0 auto;
     display: flex;
@@ -172,6 +173,7 @@
     gap: 5rem;
     font-size: 2.5rem;
 }
+
 .header .inner .menu_bar {
     width: 100px;
     height: 3px;
@@ -180,22 +182,27 @@
     left: 0;
     bottom: 15px;
 }
+
 .header .inner .menu_bar span {
     position: absolute;
     left: -99999999999px;
 }
+
 .header.on {
     display: block;
     transition: 0.7s;
 }
+
 .header.active {
     background-color: #000;
     color: #fff;
     transition: 0.7s;
 }
+
 .header.active .inner .logo .black {
     display: none;
 }
+
 .header.active .inner .logo .white {
     display: block;
 }
@@ -207,16 +214,16 @@
 }
 
 .about .inner {
-    max-width: 150.4rem;
+    max-width: 1504px;
     width: calc(100% - 4rem);
     margin: 0 auto;
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
     gap: 5vw;
 }
 
 .about .inner .deta {
-    width: 33%;
+    width: 25%;
 }
 
 .about .inner .deta .image {
@@ -248,14 +255,14 @@
 }
 
 .about .inner .info {
-    width: 65%;
+    width: 55%;
     display: flex;
     flex-direction: column;
     gap: 8rem;
 }
 
 .about .inner .info h2 {
-    font-size: 3rem;
+    font-size: 2.5rem;
     margin-bottom: 4rem;
     font-weight: 600;
 }
@@ -301,6 +308,8 @@
 .about .inner .info .education ul li span:nth-child(1) {
     font-size: 20px;
     font-weight: 500;
+    white-space: wrap;
+    word-break: keep-all;
 }
 
 .about .inner .info .education ul li span:nth-child(2) {
@@ -480,6 +489,8 @@
 
 .project .inner .text .tit p {
     font-size: 20px;
+    white-space: wrap;
+    word-break: keep-all;
 }
 
 .project .inner .text .info {
@@ -491,6 +502,7 @@
     flex-direction: column;
     gap: 20px;
 }
+
 .project .inner .text .info ul li {
     font-size: 20px;
     display: flex;
@@ -550,6 +562,7 @@
 .crocs .inner .mokup .pc .pc_box:hover img {
     animation: crocsSlide 12s infinite alternate ease-in-out;
 }
+
 .crocs .inner .mokup .mobile .moblie_box {
     width: 15.2rem;
     height: 32.8rem;
@@ -573,12 +586,15 @@
         transform: translateY(0);
     }
 }
+
 .paulbassett .inner .left_box .mokup .pc {
     margin: 0 auto;
 }
+
 .paulbassett .inner .left_box .mokup .pc .pc_box:hover img {
     animation: paulbassettSlide 12s infinite alternate ease-in-out;
 }
+
 @keyframes paulbassettSlide {
     0% {
         transform: translateY(0);
@@ -592,12 +608,15 @@
         transform: translateY(0);
     }
 }
+
 .lejour .inner .left_box .mokup .pc {
     margin: 0 auto;
 }
+
 .lejour .inner .left_box .mokup .pc .pc_box:hover img {
     animation: lejourSlide 12s infinite alternate ease-in-out;
 }
+
 @keyframes lejourSlide {
     0% {
         transform: translateY(0);
@@ -611,17 +630,21 @@
         transform: translateY(0);
     }
 }
+
 .kt {
     padding-top: 15rem;
 }
+
 .kt .inner .left_box {
     width: 49%;
 }
+
 .kt .inner .left_box .mokup {
     text-align: center;
     font-size: 16px;
     color: #999;
 }
+
 .kt .inner .left_box .mokup .mokup_wrap {
     width: 100%;
     display: flex;
@@ -629,12 +652,14 @@
     gap: 2rem;
     margin-top: 3.5rem;
 }
+
 .kt .inner .left_box .mokup .mokup_wrap .mobile_01 {
     background: url('../img/03_project/mokup-mobile-2.png') center center / 100% no-repeat;
     width: 25rem;
     height: 50rem;
     position: relative;
 }
+
 .kt .inner .left_box .mokup .mokup_wrap .mobile_box_01 {
     width: 22.5rem;
     height: 47.5rem;
@@ -644,9 +669,11 @@
     left: 12px;
     top: 13px;
 }
+
 .kt .inner .left_box .mokup .mokup_wrap .mobile_box_01:hover img {
     animation: ktSlide 12s infinite alternate ease-in-out;
 }
+
 @keyframes ktSlide {
     0% {
         transform: translateY(0);
@@ -660,12 +687,15 @@
         transform: translateY(0);
     }
 }
+
 .kt .inner .left_box .mokup .mokup_wrap .mobile_box_01 img {
     width: 100%;
 }
+
 .kt .inner .left_box .mokup .mokup_wrap .mobile_02:hover img {
     animation: ktSlide 12s infinite alternate ease-in-out;
 }
+
 @keyframes ktSlide {
     0% {
         transform: translateY(0);
@@ -679,12 +709,14 @@
         transform: translateY(0);
     }
 }
+
 .kt .inner .left_box .mokup .mokup_wrap .mobile_02 {
     background: url('../img/03_project/mokup-mobile-2.png') center center / 100% no-repeat;
     width: 25rem;
     height: 50rem;
     position: relative;
 }
+
 .kt .inner .left_box .mokup .mokup_wrap .mobile_box_02 {
     width: 22.5rem;
     height: 47.5rem;
@@ -694,9 +726,11 @@
     left: 12px;
     top: 13px;
 }
+
 .kt .inner .left_box .mokup .mokup_wrap .mobile_box_02 img {
     width: 100%;
 }
+
 .kt .inner .right_box .text .tit h3 {
     position: relative;
 }
@@ -738,24 +772,28 @@
 .design .inner .image_wrap {
     width: 100%;
 }
+
 .design .inner .image_wrap .image_box {
     width: 100%;
     display: flex;
     justify-content: space-between;
     margin-top: 3rem;
 }
+
 .design .inner .image_wrap .image_box .first_wrap {
     width: 32%;
     display: flex;
     flex-direction: column;
     row-gap: 3.2rem;
 }
+
 .design .inner .image_wrap .image_box .first_wrap .item-01 {
     width: 100%;
     max-height: 67.2rem;
     height: 44.68vw;
     background-color: #ddd;
 }
+
 .design .inner .image_wrap .image_box .first_wrap .item-01 img {
     width: 100%;
     height: 100%;
@@ -768,11 +806,13 @@
     height: 32.04vw;
     background-color: #ddd;
 }
+
 .design .inner .image_wrap .image_box .first_wrap .item-02 img {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
+
 .design .inner .image_wrap .image_box .first_wrap .item-03 {
     width: 100%;
     max-height: 48rem;
@@ -785,6 +825,7 @@
     height: 100%;
     object-fit: cover;
 }
+
 .design .inner .image_wrap .image_box .second_wrap {
     width: 32%;
     display: flex;
@@ -798,11 +839,13 @@
     height: 32.04vw;
     background-color: #ddd;
 }
+
 .design .inner .image_wrap .image_box .second_wrap .item-01 img {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
+
 .design .inner .image_wrap .image_box .second_wrap .tit {
     width: 100%;
     max-height: 67.2rem;
@@ -824,11 +867,13 @@
     height: 32.04vw;
     background-color: #ddd;
 }
+
 .design .inner .image_wrap .image_box .second_wrap .item-03 img {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
+
 .design .inner .image_wrap .image_box .third_wrap {
     width: 32%;
     display: flex;
@@ -842,6 +887,7 @@
     height: 32.04vw;
     background-color: #ddd;
 }
+
 .design .inner .image_wrap .image_box .third_wrap .item-01 img {
     width: 100%;
     height: 100%;
@@ -854,17 +900,20 @@
     height: 32.04vw;
     background-color: #ddd;
 }
+
 .design .inner .image_wrap .image_box .third_wrap .item-02 img {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
+
 .design .inner .image_wrap .image_box .third_wrap .item-03 {
     width: 100%;
     max-height: 67.2rem;
     height: 44.68vw;
     background-color: #ddd;
 }
+
 .design .inner .image_wrap .image_box .third_wrap .item-03 img {
     width: 100%;
     height: 100%;
@@ -890,10 +939,14 @@
     line-height: 1.8;
     transition: 0.7s;
 }
+.contact .inner .text .text_mobile {
+    display: none;
+}
 .contact .inner .text span {
     color: #000;
     background-color: #fff;
 }
+
 .contact .inner .icon {
     margin-top: 25rem;
 }
@@ -920,16 +973,17 @@
 .contact .inner .icon ul li p {
     font-size: 25px;
 }
-
-.contact .inner .icon .github a {
-    display: flex;
-    gap: 3rem;
+.contact .inner .icon ul li p {
+    font-size: 25px;
 }
-
 .contact .inner .icon .github:hover {
     color: #333;
     background-color: #fff;
     cursor: pointer;
+}
+.contact .inner .icon .github a {
+    display: flex;
+    gap: 3rem;
 }
 
 .contact .pdf {
@@ -965,6 +1019,7 @@
 
 .contact .pdf ul li:nth-child(1) {
     border-left: 0;
+    border-right: 0;
 }
 
 .contact .pdf ul li:nth-child(1):hover {
@@ -996,6 +1051,7 @@
 .contact .pdf ul li:nth-child(2):hover .white {
     display: block;
 }
+
 .contact .copy {
     max-width: 150.4rem;
     width: calc(100% - 4rem);
@@ -1003,33 +1059,42 @@
     margin: 3rem auto;
 }
 
+
 @media screen and (max-width: 1280px) {
 
     /* about ------------------------------------ */
     .about .inner {
         align-items: center;
     }
+
     .about .inner .info {
         gap: 5rem;
     }
+
     .about .inner .info .certificate ul li {
         display: block;
     }
+
     .about .inner .info .certificate ul li span {
         display: block;
     }
+
     .about .inner .info .education ul li {
         display: block;
     }
+
     .about .inner .info .education ul li span {
         display: block;
     }
+
     .about .inner .info h2 {
         margin-bottom: 2.5rem;
     }
+
     .about .inner .info .skill .icon {
         gap: 15px;
     }
+
     .about .inner .info .skill .icon li {
         height: 4rem;
     }
@@ -1038,32 +1103,41 @@
     .project .inner .text .tit h3 {
         font-size: 4rem;
     }
+
     .project .inner .text .tit p {
         font-size: 18px;
     }
+
     .project .inner .text .info {
         margin-top: 4rem;
     }
+
     .project .inner .text .info ul li {
         font-size: 18px;
     }
+
     .project .inner .btn button {
         width: 18rem;
         height: 5.7rem;
     }
+
     .project .inner .text .info ul li span:nth-child(1) {
         margin-right: 3rem;
     }
+
     .project .inner .btn button {
         margin-top: 4rem;
     }
+
     .project .inner .btn .process {
         margin-right: 2rem;
     }
+
     .project .inner .mokup .mobile {
         width: 12.9rem;
         height: 26.3rem;
     }
+
     .project .inner .mokup .mobile .moblie_box {
         width: 11.7rem;
         height: 25.3rem;
@@ -1071,10 +1145,12 @@
         top: 5px;
         border-radius: 15px;
     }
+
     .kt .inner .left_box .mokup .mokup_wrap .mobile_01 {
         width: 20rem;
         height: 40rem;
     }
+
     .kt .inner .left_box .mokup .mokup_wrap .mobile_box_01 {
         width: 18.5rem;
         height: 38.3rem;
@@ -1082,10 +1158,12 @@
         left: 7px;
         top: 9px;
     }
+
     .kt .inner .left_box .mokup .mokup_wrap .mobile_02 {
         width: 20rem;
         height: 40rem;
     }
+
     .kt .inner .left_box .mokup .mokup_wrap .mobile_box_02 {
         width: 18.5rem;
         height: 38.3rem;
@@ -1093,6 +1171,7 @@
         left: 7px;
         top: 9px;
     }
+
     .kt .inner .right_box .text .tit h3::before {
         left: 18rem;
     }
@@ -1101,23 +1180,31 @@
     .contact .inner .text {
         font-size: 3rem;
     }
+
     .contact .inner .icon ul li {
         height: 8rem;
     }
+
     .contact .inner .icon ul li p {
         font-size: 20px;
     }
+
     .contact .pdf ul li {
         height: 4rem;
         font-size: 18px;
     }
+
     .contact .pdf ul li a img {
         width: 3.5rem;
     }
+
     .contact .pdf ul li a {
         gap: 1rem;
     }
-}/* 1280 */
+}
+
+/* 1280 */
+
 
 @media screen and (max-width: 1100px) {
 
@@ -1131,6 +1218,7 @@
         width: 10.9rem;
         height: 24.3rem;
     }
+
     .project .inner .mokup .mobile .moblie_box {
         width: 10rem;
         height: 21.5rem;
@@ -1138,7 +1226,10 @@
         top: 14.5px;
         border-radius: 15px;
     }
-}/* 1100 */
+}
+
+/* 1100 */
+
 
 @media screen and (max-width: 960px) {
 
@@ -1146,46 +1237,57 @@
     .intro {
         height: 130rem;
     }
+
     .intro .inner {
         max-width: 90rem;
         width: calc(100% - 6rem)
     }
+
     .intro .inner .text {
         font-size: 18px;
         padding-top: 4rem;
     }
+
     .intro .inner .tit {
-        font-size: 20rem;
+        font-size: 25vw;
         margin: 30rem 0;
         position: static;
         transform: none;
     }
+
     .intro .inner .tit .tit_wrap {
         flex-wrap: wrap;
         gap: 8rem;
     }
+
     .intro .inner .tit .tit_wrap ul .p {
         padding-right: 12vw;
     }
+
     .intro .inner .tit .tit_wrap ul .p::before {
         width: 20vw;
-        height: 22vw;
+        height: 28vw;
     }
+
     .intro .inner .tit .tit_wrap ul .f {
         padding-right: 12vw;
     }
+
     .intro .inner .tit .tit_wrap ul .f::before {
         width: 19vw;
-        height: 21vw;
+        height: 27vw;
     }
+
     .intro .inner .tit .tit_wrap ul .i {
         padding-right: 15vw;
     }
+
     .intro .inner .tit .tit_wrap ul .i::before {
         width: 18vw;
-        height: 22vw;
+        height: 29vw;
         right: -5%;
     }
+
     .intro .inner .scroll {
         bottom: 10rem;
     }
@@ -1194,71 +1296,98 @@
     .header .inner {
         width: calc(100% - 6rem);
     }
+
     .header .inner .logo {
         width: 5.8rem;
     }
+
     .header .inner .nav .gnb {
         font-size: 20px;
     }
 
     /* about ------------------------------------ */
-    .about  {
+    .about {
         padding-top: 15rem;
     }
+
     .about .inner {
         max-width: 90rem;
         width: calc(100% - 6rem);
         justify-content: center;
     }
+
     .about .inner .info {
         width: 50%;
         gap: 4rem;
     }
+
     .about .inner .deta {
         width: 30%;
     }
+
     .about .inner .deta .text {
         margin-top: 3rem;
     }
+
     .about .inner .deta .text ul {
         font-size: 16px;
     }
+
     .about .inner .deta .text ul>li>span:nth-child(1) {
         width: 7rem;
     }
+
     .about .inner .info h2 {
-        font-size: 22px;
+        font-size: 20px;
         margin-bottom: 20px;
     }
+
     .about .inner .info .certificate ul {
         padding-left: 20px;
         border-left: 3px solid #ddd;
     }
+
     .about .inner .info .certificate ul li span:nth-child(1) {
         font-size: 16px;
     }
+
     .about .inner .info .certificate ul li span:nth-child(2) {
         font-size: 14px;
     }
+
     .about .inner .info .education ul {
         padding-left: 20px;
         border-left: 3px solid #ddd;
     }
+
     .about .inner .info .education ul li span:nth-child(1) {
         font-size: 16px;
     }
+
     .about .inner .info .education ul li span:nth-child(2) {
         font-size: 14px;
     }
+
+    .about .inner .info .skill h2::after {
+        display: none;
+    }
+
+    .about .inner .info .skill .text li.on {
+        display: none;
+    }
+
     .about .inner .info .skill .icon {
         gap: 13px;
     }
+
     .about .inner .info .skill .icon li {
         height: 3.5rem;
     }
+
     .about .inner .info .skill .text {
         margin-top: 15px;
     }
+
     .about .inner .info .skill h2::after {
         font-size: 14px;
     }
@@ -1267,41 +1396,56 @@
     .project {
         padding-top: 15rem;
     }
+    .project .inner {
+        max-width: 90rem;
+        width: calc(100% - 6rem);
+    }
     .project .inner .mokup .pc p {
         display: none;
     }
+
     .project .inner .text .tit h3 {
         font-size: 3.5rem;
     }
+
     .project .inner .text .tit p {
         font-size: 16px;
     }
+
     .project .inner .text .info {
         margin-top: 3rem;
     }
+
     .project .inner .text .info ul {
         gap: 15px;
     }
+
     .project .inner .text .info ul li {
         font-size: 16px;
     }
+
     .project .inner .btn button {
         width: 14.5rem;
         height: 4.5rem;
     }
+
     .project .inner .btn .process {
         font-size: 16px;
     }
+
     .project .inner .btn .website {
         font-size: 16px;
     }
+
     .kt .inner .left_box .mokup p {
         display: none;
     }
+
     .kt .inner .left_box .mokup .mokup_wrap .mobile_01 {
         width: 16rem;
         height: 36rem;
     }
+
     .kt .inner .left_box .mokup .mokup_wrap .mobile_box_01 {
         width: 15rem;
         height: 30.8rem;
@@ -1309,10 +1453,12 @@
         left: 5px;
         top: 27px;
     }
+
     .kt .inner .left_box .mokup .mokup_wrap .mobile_02 {
         width: 16rem;
         height: 36rem;
     }
+
     .kt .inner .left_box .mokup .mokup_wrap .mobile_box_02 {
         width: 15rem;
         height: 30.8rem;
@@ -1320,6 +1466,7 @@
         left: 5px;
         top: 27px;
     }
+
     .kt .inner .right_box .text .tit h3::before {
         width: 3.5rem;
         height: 3.5rem;
@@ -1330,19 +1477,24 @@
     .design {
         padding-top: 15rem;
     }
+
     .design .inner {
         max-width: 90rem;
         width: calc(100% - 6rem)
     }
+
     .design .inner .text p {
         font-size: 16px;
     }
+
     .design .inner .text span {
         font-size: 14px;
     }
+
     .design .inner .image_wrap {
         margin-top: 3rem;
     }
+
     .design .inner .image_wrap .image_box .second_wrap .tit h4 {
         font-size: 3rem;
     }
@@ -1351,25 +1503,231 @@
     .contact {
         padding-top: 15rem;
     }
+
     .contact .inner {
         max-width: 90rem;
         width: calc(100% - 6rem)
     }
+
     .contact .inner .text {
         margin-top: 35rem;
         margin-bottom: 35rem;
     }
+
     .contact .inner .icon ul li {
         height: 7.5rem;
         gap: 15px;
     }
+    .contact .inner .icon .github a {
+        gap: 15px;
+    }
+
     .contact .inner .icon ul li img {
         height: 2.2rem;
     }
+
     .contact .pdf ul li {
         font-size: 16px;
     }
+
     .contact .pdf ul li a img {
         width: 3rem;
     }
-}/* 960 */
+}
+
+/* 960 */
+
+
+@media screen and (max-width: 840px) {
+
+    /* about ------------------------------------ */
+    .about .inner {
+        gap: 3vw;
+    }
+    .about .inner .deta {
+        width: 35%;
+    }
+    .about .inner .info {
+        width: 45%;
+    }
+    .about .inner .info .skill .icon {
+        flex-wrap: wrap;
+    }
+    .about .inner .deta .text ul {
+        font-size: 15px;
+        white-space: nowrap;
+    }
+    .about .inner .deta .text ul>li>span:nth-child(1) {
+        width: 6rem;
+    }
+
+    /* project ---------------------------------- */
+    .project .inner .mokup .mobile {
+        width: 8.9rem;
+        height: 18.3rem;
+    }
+
+    .project .inner .mokup .mobile .moblie_box {
+        width: 8.1rem;
+        height: 17.6rem;
+        left: 4px;
+        top: 4.5px;
+        border-radius: 11.5px
+    }
+    .kt .inner .left_box .mokup .mokup_wrap .mobile_01 {
+        width: 13rem;
+        height: 33rem;
+    }
+    .kt .inner .left_box .mokup .mokup_wrap .mobile_box_01 {
+        width: 12rem;
+        height: 24.8rem;
+        border-radius: 16px;
+        left: 5px;
+        top: 41px;
+    }
+    .kt .inner .left_box .mokup .mokup_wrap .mobile_02 {
+        width: 13rem;
+        height: 33rem;
+    }
+    .kt .inner .left_box .mokup .mokup_wrap .mobile_box_02 {
+        width: 12rem;
+        height: 24.8rem;
+        border-radius: 16px;
+        left: 5px;
+        top: 41px;
+    }
+    .project .inner .btn button {
+        width: 13.5rem;
+    }
+
+    .project .inner .btn .process {
+        margin-right: 10px;
+    }
+
+    /* contact ---------------------------------- */
+    .contact .inner .text {
+        font-size: 2.5rem;
+    }
+     .text_pc {
+        display: none;
+    }
+    .contact .inner .text .text_mobile {
+        display: block;
+    }
+    .contact .inner .icon ul li {
+        height: 6.5rem;
+        gap: 10px;
+    }
+    .contact .inner .icon ul li p {
+        font-size: 16px;
+    }
+    .contact .copy {
+        font-size: 14px;
+    }
+}/* 840 */
+
+@media screen and (max-width: 750px) {
+
+    /* intro ------------------------------------ */
+    .intro {
+        height: 100rem;
+    }
+    .intro .inner .text ul {
+        flex-direction: column;
+        align-items: center;
+        row-gap: 15px;
+        font-size: 16px;
+    }
+    .intro .inner .tit {
+        margin: 25rem 0;
+    }
+    .intro .inner .scroll {
+        bottom: 5rem;
+    }
+    
+    /* about ------------------------------------ */
+    .about {
+        width: fit-content;
+        margin: 0 auto;
+        padding-top: 13rem;
+    }
+    .about .inner {
+        flex-direction: column;
+    }
+    .about .inner .deta {
+        width: 100%;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 3rem;
+        margin-bottom: 3rem;
+    }
+    .about .inner .deta .text {
+        margin-top: 0;
+    }
+    .about .inner .info {
+        width: fit-content;
+        padding-top: 3rem;
+        border-top: 1px solid #eee;
+    }
+    .about .inner .info .education ul li span:nth-child(1) {
+        white-space: nowrap;
+    }
+    .about .inner .info .skill .icon {
+        gap: 10px;
+    }
+    .about .inner .info .skill .icon li {
+        height: 3rem;
+    }
+
+    /* project ---------------------------------- */
+    .project {
+        padding-top: 13rem;
+    }
+    .project .inner {
+        flex-direction: column;
+        row-gap: 4rem;
+    }
+    .project .inner .text .tit p {
+        white-space: nowrap;
+    }
+    .project .inner .text .tit h3 {
+        font-size: 3rem;
+        margin-bottom: 15px;
+    }
+    .project .inner .left_box {
+        width: 50%;
+    }
+    .project .inner .right_box {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .project .inner .btn button {
+        width: 14.5rem;
+    }
+
+    /* design ----------------------------------- */
+    .design {
+        padding-top: 13rem;
+    }
+
+    /* contact ---------------------------------- */
+    .contact .inner .text {
+        margin-top: 15rem;
+        margin-bottom: 13rem;
+    }
+    .contact .inner .icon ul {
+        flex-direction: column;
+        align-items: center;
+        row-gap: 20px;
+    }
+    .contact .inner .icon ul li {
+        width: 100%;
+        gap: 20px;
+    }
+    .contact .inner .icon .github a {
+        gap: 20px;
+    }
+}/* 750 */
