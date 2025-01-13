@@ -1,9 +1,8 @@
 $(function () {
 
     //스크롤 시 배경색 & 헤더 변경
-    let sectionTop = $('.about').offset().top;
-    let footerTop = $('.contact').offset().top;
-    let navBar = $('.header .nav li');
+    let sectionTop = $('#section').offset().top;
+    let footerTop = $('#footer').offset().top;
 
     //메뉴 클릭 시 스크롤 이동
     $('.header .nav .gnb li').click(function (e) {
@@ -33,18 +32,24 @@ $(function () {
         console.log(scrollBar)
 
         //스크롤 시 배경색 & 헤더 변경
-        if (scrollBar > sectionTop - 300) {
+        if (scrollBar > sectionTop - 350) {
             $('body').addClass('on')
             $('.header').addClass('on');
         } else {
             $('body').removeClass('on')
             $('.header').removeClass('on');
         }
-        if (scrollBar > footerTop - 400) {
+        if (scrollBar > footerTop) {
             $('body').removeClass('on')
             $('.header').addClass('active')
+            menuBar.css({
+                'background-color' : '#fff'
+            })
         } else {
             $('.header').removeClass('active')
+            menuBar.css({
+                'background-color' : '#555'
+            })
         }
 
         //스크롤 시 메뉴바 이동
@@ -77,14 +82,7 @@ $(function () {
                 'width': menu.eq(4).outerWidth(),
                 'left': menu.eq(4).position().left,
             })
-            menuBar.css({
-                'background-color' : '#fff'
-            })
-        } else {
-            menuBar.css({
-                'background-color' : '#555'
-            })
-        }
+        } 
     });//scroll()
 
     
