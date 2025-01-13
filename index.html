@@ -9,69 +9,12 @@
     <link rel="stylesheet" href="css/style.css">
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="lib/jquery-3.7.1.min.js"></script>
-    <script>
-        $(function () {
-
-            //body & header
-            let sectionTop = $('.about').offset().top;
-            let footerTop = $('.contact').offset().top;
-            let navBar = $('.header .nav li');
-
-            $(window).scroll(function () {
-                let scrollBar = $(window).scrollTop();
-                console.log(scrollBar)
-                if (scrollBar > sectionTop - 300) {
-                    $('body').addClass('on')
-                    $('.header').addClass('on');
-                } else {
-                    $('body').removeClass('on')
-                    $('.header').removeClass('on');
-                }
-                if (scrollBar > footerTop - 300) {
-                    $('.header').addClass('active')
-                } else {
-                    $('.header').removeClass('active')
-                }
-            });//scroll()
-
-            //nav
-            let navAbout = $('.header .nav .gnb .nav_about');
-            let navProject = $('.header .nav .gnb .nav_project');
-            let navDesign = $('.header .nav .gnb .nav_design');
-            let navContact = $('.header .nav .gnb .nav_contact');
-
-            let aboutTop = $('.about').offset().top;
-            let projectTop = $('.project').offset().top();
-            let designTop = $('.design').offset().top;
-            let contactTop = $('.contact').offset().top;
-
-            $(window).scroll(function (){
-                let scrollBar = $(window).scrollTop();
-                console.log(scrollBar)
-
-                if(scrollBar = aboutTop) {
-                    $(navAbout).addClass('active')
-                }
-                if(scrollBar = projectTop) {
-                    $(navProject).addClass('active')
-                }
-            })//scroll()
-
-            //skill
-            let skillIcon = $('.skill .icon li');
-            let skillText = $('.skill .text li');
-
-            $(skillIcon).mouseenter(function () {
-                $(skillText).removeClass('on')
-                $(skillText).eq($(this).index()).addClass('on')
-            });
-        });//script end
-    </script>
+    <script src="js/main.js"></script>
 </head>
 
 <body>
     <main>
-        <div class="intro">
+        <div class="intro" id="intro">
             <div class="inner">
                 <div class="text">
                     <ul>
@@ -96,7 +39,7 @@
                 </div><!-- .tit end -->
                 <div class="scroll">
                     <button type="button" class="scroll_btn">
-                        <a href="#abot"><img src="img/01_intro/scroll.png" alt="scroll"></a>
+                        <a href="#about"><img src="img/01_intro/scroll.png" alt="scroll"></a>
                     </button>
                 </div><!-- .scroll end -->
             </div><!-- .inner end -->
@@ -107,24 +50,27 @@
         <header class="header pc">
             <div class="inner">
                 <h1 class="logo">
-                    <a href="#">
+                    <a href="#intro">
                         <img class="black" src="img/logo1.png" alt="logo 1">
                         <img class="white" src="img/logo2.png" alt="logo 2">
                     </a>
                 </h1><!-- .logo end -->
                 <nav class="nav">
                     <ul class="gnb">
-                        <li><a href="#Intro">Intro</a></li>
-                        <li class="nav_about"><a href="#About">About</a></li>
-                        <li class="nav_project"><a href="#Project">Project</a></li>
-                        <li class="nav_design"><a href="#Design">Design</a></li>
+                        <li class="nav_about"><a href="#intro">Intro</a></li>
+                        <li class="nav_about"><a href="#about">About</a></li>
+                        <li class="nav_project"><a href="#project">Project</a></li>
+                        <li class="nav_design"><a href="#design">Design</a></li>
                         <li class="nav_contact"><a href="#contact">Contact</a></li>
                     </ul>
                 </nav><!-- .nav end -->
+                <div class="menu_bar">
+                    <span>메뉴바</span>
+                </div><!-- .menu_bar end -->
             </div><!-- .inner end -->
         </header><!-- .header pc end -->
 
-        <div class="about">
+        <div class="about" id="about">
             <div class="inner">
                 <div class="deta">
                     <div class="image"></div><!-- .image end -->
@@ -207,321 +153,334 @@
             </div><!-- .inner end -->
         </div><!-- .about end -->
 
-        <div class="project vasol">
-            <div class="inner">
-                <div class="left_box">
-                    <div data-aos="zoom-in-right">
-                        <div class="mokup">
-                            <div class="pc">
+        <div id="project">
+            <div class="project vasol">
+                <div class="inner">
+                    <div class="left_box">
+                        <div data-aos="zoom-in-right">
+                            <div class="mokup">
+                                <div class="pc">
+                                    <p>스크린에 마우스를 올려보세요.</p>
+                                    <div class="pc_box">
+                                        <img src="img/03_project/vasol-pc.jpg" alt="바쏠 pc">
+                                    </div><!-- .pc_box end -->
+                                </div><!-- .pc end -->
+                                <div class="mobile">
+                                    <div class="moblie_box">
+                                        <img src="img/03_project/vasol-mobile.jpg" alt="바쏠 mobile">
+                                    </div><!-- .moblie_box end-->
+                                </div><!-- .mobile end -->
+                            </div><!-- .mokup end -->
+                        </div><!-- .zoom-in-right end -->
+                    </div>
+                    <div class="right_box">
+                        <div data-aos="zoom-in-left">
+                            <div class="text">
+                                <div class="tit">
+                                    <h3>VASOL</h3>
+                                    <p>테이블웨어 브랜드 ‘VASOL’ 반응형 홈페이지 리뉴얼입니다.</p>
+                                </div><!-- .tit end -->
+                                <div class="info">
+                                    <ul>
+                                        <li>
+                                            <span>TYPE</span>
+                                            <span>Responsive Web</span>
+                                        </li>
+                                        <li>
+                                            <span>PAGE</span>
+                                            <span>Main Page,</span>
+                                            <span><a href="#">Sub Page</a></span>
+                                        </li>
+                                        <li>
+                                            <span>TOOL</span>
+                                            <span>Html, Css, Javascript, Jquery, Photoshop, Illustrator, Figma</span>
+                                        </li>
+                                        <li>
+                                            <span>PART</span>
+                                            <span>디자인, 퍼블리싱 100%</span>
+                                        </li>
+                                    </ul>
+                                </div><!-- .info end -->
+                                <div class="btn">
+                                    <button type="button" class="process">PROCESS</button><!-- .process end -->
+                                    <button type="button" class="website">WEBSITE</button><!-- .process end -->
+                                </div><!-- .btn end -->
+                            </div><!-- .text end -->
+                        </div><!-- .zoom-in-left end -->
+                    </div>
+                </div><!-- .inner end -->
+            </div><!-- .project end -->
+            <div class="project crocs">
+                <div class="inner">
+                    <div class="left_box">
+                        <div data-aos="zoom-in-right">
+                            <div class="mokup">
+                                <div class="pc">
+                                    <p>스크린에 마우스를 올려보세요.</p>
+                                    <div class="pc_box">
+                                        <img src="img/03_project/crocs-pc.jpg" alt="크록스 pc">
+                                    </div><!-- .pc_box end -->
+                                </div><!-- .pc end -->
+                                <div class="mobile">
+                                    <div class="moblie_box">
+                                        <img src="img/03_project/crocs-mobile.jpg" alt="크록스 mobile">
+                                    </div><!-- .moblie_box end-->
+                                </div><!-- .mobile end -->
+                            </div><!-- .mokup end -->
+                        </div><!-- .zoom-in-right end -->
+                    </div>
+                    <div class="right_box">
+                        <div data-aos="zoom-in-left">
+                            <div class="text">
+                                <div class="tit">
+                                    <h3>CROCS</h3>
+                                    <p>신발 브랜드 ‘CROCS’ 반응형 홈페이지 리뉴얼입니다.</p>
+                                </div><!-- .tit end -->
+                                <div class="info">
+                                    <ul>
+                                        <li>
+                                            <span>TYPE</span>
+                                            <span>Responsive Web</span>
+                                        </li>
+                                        <li>
+                                            <span>PAGE</span>
+                                            <span>Main Page</span>
+                                        </li>
+                                        <li>
+                                            <span>TOOL</span>
+                                            <span>Html, Css, Javascript, Jquery, Photoshop, Figma</span>
+                                        </li>
+                                        <li>
+                                            <span>PART</span>
+                                            <span>디자인, 퍼블리싱 100%</span>
+                                        </li>
+                                    </ul>
+                                </div><!-- .info end -->
+                                <div class="btn">
+                                    <button type="button" class="process">PROCESS</button><!-- .process end -->
+                                    <button type="button" class="website">WEBSITE</button><!-- .process end -->
+                                </div><!-- .btn end -->
+                            </div><!-- .text end -->
+                        </div><!-- .zoom-in-left end -->
+                    </div>
+                </div><!-- .inner end -->
+            </div><!-- .project end -->
+            <div class="project paulbassett">
+                <div class="inner">
+                    <div class="left_box">
+                        <div data-aos="zoom-in-right">
+                            <div class="mokup">
+                                <div class="pc">
+                                    <p>스크린에 마우스를 올려보세요.</p>
+                                    <div class="pc_box">
+                                        <img src="img/03_project/paulbassett.jpg" alt="폴바셋 pc">
+                                    </div><!-- .pc_box end -->
+                                </div><!-- .pc end -->
+                            </div><!-- .mokup end -->
+                        </div><!-- .zoom-in-right end -->
+                    </div>
+                    <div class="right_box">
+                        <div data-aos="zoom-in-left">
+                            <div class="text">
+                                <div class="tit">
+                                    <h3>Paul Bassett</h3>
+                                    <p>커피 브랜드 ‘Paul Bassett’ 홈페이지 리뉴얼입니다.</p>
+                                </div><!-- .tit end -->
+                                <div class="info">
+                                    <ul>
+                                        <li>
+                                            <span>TYPE</span>
+                                            <span>Website</span>
+                                        </li>
+                                        <li>
+                                            <span>PAGE</span>
+                                            <span>Main Page</span>
+                                        </li>
+                                        <li>
+                                            <span>TOOL</span>
+                                            <span>Html, Css, Javascript, Jquery, Photoshop</span>
+                                        </li>
+                                        <li>
+                                            <span>PART</span>
+                                            <span>디자인, 퍼블리싱 100%</span>
+                                        </li>
+                                    </ul>
+                                </div><!-- .info end -->
+                                <div class="btn">
+                                    <button type="button" class="process">PROCESS</button><!-- .process end -->
+                                    <button type="button" class="website">WEBSITE</button><!-- .process end -->
+                                </div><!-- .btn end -->
+                            </div><!-- .text end -->
+                        </div><!-- .zoom-in-left end -->
+                    </div>
+                </div><!-- .inner end -->
+            </div><!-- .project end -->
+            <div class="project lejour">
+                <div class="inner">
+                    <div class="left_box">
+                        <div data-aos="zoom-in-right">
+                            <div class="mokup">
+                                <div class="pc">
+                                    <p>스크린에 마우스를 올려보세요.</p>
+                                    <div class="pc_box">
+                                        <img src="img/03_project/Le Jour.png" alt="르주르 pc">
+                                    </div><!-- .pc_box end -->
+                                </div><!-- .pc end -->
+                            </div><!-- .mokup end -->
+                        </div><!-- .zoom-in-right end -->
+                    </div>
+                    <div class="right_box">
+                        <div data-aos="zoom-in-left">
+                            <div class="text">
+                                <div class="tit">
+                                    <h3>Le Jour</h3>
+                                    <p>라이프스타일 브랜드 ‘Le Jour’ 홈페이지 모작입니다.</p>
+                                </div><!-- .tit end -->
+                                <div class="info">
+                                    <ul>
+                                        <li>
+                                            <span>TYPE</span>
+                                            <span>Website</span>
+                                        </li>
+                                        <li>
+                                            <span>PAGE</span>
+                                            <span>Main Page</span>
+                                        </li>
+                                        <li>
+                                            <span>TOOL</span>
+                                            <span>Html, Css, Javascript, Jquery, Photoshop</span>
+                                        </li>
+                                        <li>
+                                            <span>PART</span>
+                                            <span>퍼블리싱 100%</span>
+                                        </li>
+                                    </ul>
+                                </div><!-- .info end -->
+                                <div class="btn">
+                                    <button type="button" class="website">WEBSITE</button><!-- .process end -->
+                                </div><!-- .btn end -->
+                            </div><!-- .text end -->
+                        </div><!-- .zoom-in-left end -->
+                    </div>
+                </div><!-- .inner end -->
+            </div><!-- .project end -->
+            <div class="project kt">
+                <div class="inner">
+                    <div class="left_box">
+                        <div data-aos="zoom-in-right">
+                            <div class="mokup">
                                 <p>스크린에 마우스를 올려보세요.</p>
-                                <div class="pc_box">
-                                    <img src="img/03_project/vasol-pc.jpg" alt="바쏠 pc">
-                                </div><!-- .pc_box end -->
-                            </div><!-- .pc end -->
-                            <div class="mobile">
-                                <div class="moblie_box">
-                                    <img src="img/03_project/vasol-mobile.jpg" alt="바쏠 mobile">
-                                </div><!-- .moblie_box end-->
-                            </div><!-- .mobile end -->
-                        </div><!-- .mokup end -->
-                    </div><!-- .zoom-in-right end -->
-                </div>
-                <div class="right_box">
-                    <div data-aos="zoom-in-left">
-                        <div class="text">
-                            <div class="tit">
-                                <h3>VASOL</h3>
-                                <p>테이블웨어 브랜드 ‘VASOL’ 반응형 홈페이지 리뉴얼입니다.</p>
-                            </div><!-- .tit end -->
-                            <div class="info">
-                                <ul>
-                                    <li>
-                                        <span>TYPE</span>
-                                        <span>Responsive Web</span>
-                                    </li>
-                                    <li>
-                                        <span>PAGE</span>
-                                        <span>Main Page,</span>
-                                        <span><a href="#">Sub Page</a></span>
-                                    </li>
-                                    <li>
-                                        <span>TOOL</span>
-                                        <span>Html, Css, Javascript, Jquery, Photoshop, Illustrator, Figma</span>
-                                    </li>
-                                    <li>
-                                        <span>PART</span>
-                                        <span>디자인, 퍼블리싱 100%</span>
-                                    </li>
-                                </ul>
-                            </div><!-- .info end -->
-                            <div class="btn">
-                                <button type="button" class="process">PROCESS</button><!-- .process end -->
-                                <button type="button" class="website">WEBSITE</button><!-- .process end -->
-                            </div><!-- .btn end -->
-                        </div><!-- .text end -->
-                    </div><!-- .zoom-in-left end -->
-                </div>
-            </div><!-- .inner end -->
-        </div><!-- .project end -->
-
-        <div class="project crocs">
-            <div class="inner">
-                <div class="left_box">
-                    <div data-aos="zoom-in-right">
-                        <div class="mokup">
-                            <div class="pc">
+                                <div class="mokup_wrap">
+                                    <div class="mobile_01">
+                                        <div class="mobile_box_01">
+                                            <img src="img/03_project/kt멤버십.jpg" alt="kt 멤버십 mobile">
+                                        </div><!-- .pc_box end -->
+                                    </div><!-- .mobile_01 end -->
+                                    <div class="mobile_02">
+                                        <div class="mobile_box_02">
+                                            <img src="img/03_project/kt멤버십.jpg" alt="kt 멤버십 mobile">
+                                        </div><!-- .pc_box end -->
+                                    </div><!-- .mobile_02 end -->
+                                </div><!-- .mokup_wrap end -->
+                            </div><!-- .mokup end -->
+                        </div><!-- .zoom-in-right end -->
+                    </div>
+                    <div class="right_box">
+                        <div data-aos="zoom-in-left">
+                            <div class="text">
+                                <div class="tit">
+                                    <h3>KT 멤버십</h3>
+                                    <p>KT 소프트웨어인 ‘KT 멤버십' 모바일 UX 설계입니다.</p>
+                                </div><!-- .tit end -->
+                                <div class="info">
+                                    <ul>
+                                        <li>
+                                            <span>TYPE</span>
+                                            <span>Mobile APP</span>
+                                        </li>
+                                        <li>
+                                            <span>PAGE</span>
+                                            <span>Main Page, Sub Page</span>
+                                        </li>
+                                        <li>
+                                            <span>TOOL</span>
+                                            <span>Figma, Photoshop</span>
+                                        </li>
+                                        <li>
+                                            <span>PART</span>
+                                            <span>디자인 100%</span>
+                                        </li>
+                                    </ul>
+                                </div><!-- .info end -->
+                                <div class="btn">
+                                    <button type="button" class="process">PROCESS</button><!-- .process end -->
+                                    <button type="button" class="website">FIGMA</button><!-- .process end -->
+                                </div><!-- .btn end -->
+                            </div><!-- .text end -->
+                        </div><!-- .zoom-in-left end -->
+                    </div>
+                </div><!-- .inner end -->
+            </div><!-- .project end -->
+            <div class="project kt">
+                <div class="inner">
+                    <div class="left_box">
+                        <div data-aos="zoom-in-right">
+                            <div class="mokup">
                                 <p>스크린에 마우스를 올려보세요.</p>
-                                <div class="pc_box">
-                                    <img src="img/03_project/crocs-pc.jpg" alt="크록스 pc">
-                                </div><!-- .pc_box end -->
-                            </div><!-- .pc end -->
-                            <div class="mobile">
-                                <div class="moblie_box">
-                                    <img src="img/03_project/crocs-mobile.jpg" alt="크록스 mobile">
-                                </div><!-- .moblie_box end-->
-                            </div><!-- .mobile end -->
-                        </div><!-- .mokup end -->
-                    </div><!-- .zoom-in-right end -->
-                </div>
-                <div class="right_box">
-                    <div data-aos="zoom-in-left">
-                        <div class="text">
-                            <div class="tit">
-                                <h3>CROCS</h3>
-                                <p>신발 브랜드 ‘CROCS’ 반응형 홈페이지 리뉴얼입니다.</p>
-                            </div><!-- .tit end -->
-                            <div class="info">
-                                <ul>
-                                    <li>
-                                        <span>TYPE</span>
-                                        <span>Responsive Web</span>
-                                    </li>
-                                    <li>
-                                        <span>PAGE</span>
-                                        <span>Main Page</span>
-                                    </li>
-                                    <li>
-                                        <span>TOOL</span>
-                                        <span>Html, Css, Javascript, Jquery, Photoshop, Figma</span>
-                                    </li>
-                                    <li>
-                                        <span>PART</span>
-                                        <span>디자인, 퍼블리싱 100%</span>
-                                    </li>
-                                </ul>
-                            </div><!-- .info end -->
-                            <div class="btn">
-                                <button type="button" class="process">PROCESS</button><!-- .process end -->
-                                <button type="button" class="website">WEBSITE</button><!-- .process end -->
-                            </div><!-- .btn end -->
-                        </div><!-- .text end -->
-                    </div><!-- .zoom-in-left end -->
-                </div>
-            </div><!-- .inner end -->
-        </div><!-- .project end -->
+                                <div class="mokup_wrap">
+                                    <div class="mobile_01">
+                                        <div class="mobile_box_01">
+                                            <img src="img/03_project/kt멤버십.jpg" alt="kt 멤버십 mobile">
+                                        </div><!-- .pc_box end -->
+                                    </div><!-- .mobile_01 end -->
+                                    <div class="mobile_02">
+                                        <div class="mobile_box_02">
+                                            <img src="img/03_project/kt멤버십.jpg" alt="kt 멤버십 mobile">
+                                        </div><!-- .pc_box end -->
+                                    </div><!-- .mobile_02 end -->
+                                </div><!-- .mokup_wrap end -->
+                            </div><!-- .mokup end -->
+                        </div><!-- .zoom-in-right end -->
+                    </div>
+                    <div class="right_box">
+                        <div data-aos="zoom-in-left">
+                            <div class="text">
+                                <div class="tit">
+                                    <h3>KT 멤버십</h3>
+                                    <p>KT 소프트웨어인 ‘KT 멤버십' 모바일 UX 설계입니다.</p>
+                                </div><!-- .tit end -->
+                                <div class="info">
+                                    <ul>
+                                        <li>
+                                            <span>TYPE</span>
+                                            <span>Mobile APP</span>
+                                        </li>
+                                        <li>
+                                            <span>PAGE</span>
+                                            <span>Main Page, Sub Page</span>
+                                        </li>
+                                        <li>
+                                            <span>TOOL</span>
+                                            <span>Figma, Photoshop</span>
+                                        </li>
+                                        <li>
+                                            <span>PART</span>
+                                            <span>디자인 100%</span>
+                                        </li>
+                                    </ul>
+                                </div><!-- .info end -->
+                                <div class="btn">
+                                    <button type="button" class="process">PROCESS</button><!-- .process end -->
+                                    <button type="button" class="website">FIGMA</button><!-- .process end -->
+                                </div><!-- .btn end -->
+                            </div><!-- .text end -->
+                        </div><!-- .zoom-in-left end -->
+                    </div>
+                </div><!-- .inner end -->
+            </div><!-- .project end -->
+        </div><!-- #project end -->
 
-        <div class="project paulbassett">
-            <div class="inner">
-                <div class="left_box">
-                    <div data-aos="zoom-in-right">
-                        <div class="mokup">
-                            <div class="pc">
-                                <p>스크린에 마우스를 올려보세요.</p>
-                                <div class="pc_box">
-                                    <img src="img/03_project/crocs-pc.jpg" alt="크록스 pc">
-                                </div><!-- .pc_box end -->
-                            </div><!-- .pc end -->
-                        </div><!-- .mokup end -->
-                    </div><!-- .zoom-in-right end -->
-                </div>
-                <div class="right_box">
-                    <div data-aos="zoom-in-left">
-                        <div class="text">
-                            <div class="tit">
-                                <h3>Paul Bassett</h3>
-                                <p>커피 브랜드 ‘Paul Bassett’ 홈페이지 리뉴얼입니다.</p>
-                            </div><!-- .tit end -->
-                            <div class="info">
-                                <ul>
-                                    <li>
-                                        <span>TYPE</span>
-                                        <span>Website</span>
-                                    </li>
-                                    <li>
-                                        <span>PAGE</span>
-                                        <span>Main Page</span>
-                                    </li>
-                                    <li>
-                                        <span>TOOL</span>
-                                        <span>Html, Css, Javascript, Jquery, Photoshop</span>
-                                    </li>
-                                    <li>
-                                        <span>PART</span>
-                                        <span>디자인, 퍼블리싱 100%</span>
-                                    </li>
-                                </ul>
-                            </div><!-- .info end -->
-                            <div class="btn">
-                                <button type="button" class="process">PROCESS</button><!-- .process end -->
-                                <button type="button" class="website">WEBSITE</button><!-- .process end -->
-                            </div><!-- .btn end -->
-                        </div><!-- .text end -->
-                    </div><!-- .zoom-in-left end -->
-                </div>
-            </div><!-- .inner end -->
-        </div><!-- .project end -->
-
-        <div class="project lejour">
-            <div class="inner">
-                <div class="left_box">
-                    <div data-aos="zoom-in-right">
-                        <div class="mokup">
-                            <div class="pc">
-                                <p>스크린에 마우스를 올려보세요.</p>
-                                <div class="pc_box">
-                                    <img src="img/03_project/crocs-pc.jpg" alt="크록스 pc">
-                                </div><!-- .pc_box end -->
-                            </div><!-- .pc end -->
-                        </div><!-- .mokup end -->
-                    </div><!-- .zoom-in-right end -->
-                </div>
-                <div class="right_box">
-                    <div data-aos="zoom-in-left">
-                        <div class="text">
-                            <div class="tit">
-                                <h3>Le Jour</h3>
-                                <p>라이프스타일 브랜드 ‘Le Jour’ 홈페이지 모작입니다.</p>
-                            </div><!-- .tit end -->
-                            <div class="info">
-                                <ul>
-                                    <li>
-                                        <span>TYPE</span>
-                                        <span>Website</span>
-                                    </li>
-                                    <li>
-                                        <span>PAGE</span>
-                                        <span>Main Page</span>
-                                    </li>
-                                    <li>
-                                        <span>TOOL</span>
-                                        <span>Html, Css, Javascript, Jquery, Photoshop</span>
-                                    </li>
-                                    <li>
-                                        <span>PART</span>
-                                        <span>퍼블리싱 100%</span>
-                                    </li>
-                                </ul>
-                            </div><!-- .info end -->
-                            <div class="btn">
-                                <button type="button" class="website">WEBSITE</button><!-- .process end -->
-                            </div><!-- .btn end -->
-                        </div><!-- .text end -->
-                    </div><!-- .zoom-in-left end -->
-                </div>
-            </div><!-- .inner end -->
-        </div><!-- .project end -->
-
-        <div class="project kt">
-            <div class="inner">
-                <div class="left_box">
-                    <div data-aos="zoom-in-right">
-                        <div class="mokup">
-                            <div class="mobile_kt">
-                                <div class="mobile_box">
-                                    <img src="img/03_project/kt.svg" alt="kt mobile">
-                                </div><!-- .pc_box end -->
-                            </div><!-- .pc end -->
-                        </div><!-- .mokup end -->
-                    </div><!-- .zoom-in-right end -->
-                </div>
-                <div class="right_box">
-                    <div data-aos="zoom-in-left">
-                        <div class="text">
-                            <div class="tit">
-                                <h3>KT 멤버십</h3>
-                                <p>KT 소프트웨어인 ‘KT 멤버십' 모바일 UX 설계입니다.</p>
-                            </div><!-- .tit end -->
-                            <div class="info">
-                                <ul>
-                                    <li>
-                                        <span>TYPE</span>
-                                        <span>Mobile APP</span>
-                                    </li>
-                                    <li>
-                                        <span>PAGE</span>
-                                        <span>Main Page, Sub Page</span>
-                                    </li>
-                                    <li>
-                                        <span>TOOL</span>
-                                        <span>Figma, Photoshop</span>
-                                    </li>
-                                    <li>
-                                        <span>PART</span>
-                                        <span>디자인 100%</span>
-                                    </li>
-                                </ul>
-                            </div><!-- .info end -->
-                            <div class="btn">
-                                <button type="button" class="process">PROCESS</button><!-- .process end -->
-                                <button type="button" class="website">FIGMA</button><!-- .process end -->
-                            </div><!-- .btn end -->
-                        </div><!-- .text end -->
-                    </div><!-- .zoom-in-left end -->
-                </div>
-            </div><!-- .inner end -->
-        </div><!-- .project end -->
-
-        <div class="project kt">
-            <div class="inner">
-                <div class="left_box">
-                    <div data-aos="zoom-in-right">
-                        <div class="mokup">
-                            <div class="mobile_kt">
-                                <div class="mobile_box">
-                                    <img src="img/03_project/kt.svg" alt="kt mobile">
-                                </div><!-- .pc_box end -->
-                            </div><!-- .pc end -->
-                        </div><!-- .mokup end -->
-                    </div><!-- .zoom-in-right end -->
-                </div>
-                <div class="right_box">
-                    <div data-aos="zoom-in-left">
-                        <div class="text">
-                            <div class="tit">
-                                <h3>KT 멤버십</h3>
-                                <p>KT 소프트웨어인 ‘KT 멤버십' 모바일 UX 설계입니다.</p>
-                            </div><!-- .tit end -->
-                            <div class="info">
-                                <ul>
-                                    <li>
-                                        <span>TYPE</span>
-                                        <span>Mobile APP</span>
-                                    </li>
-                                    <li>
-                                        <span>PAGE</span>
-                                        <span>Main Page, Sub Page</span>
-                                    </li>
-                                    <li>
-                                        <span>TOOL</span>
-                                        <span>Figma, Photoshop</span>
-                                    </li>
-                                    <li>
-                                        <span>PART</span>
-                                        <span>디자인 100%</span>
-                                    </li>
-                                </ul>
-                            </div><!-- .info end -->
-                            <div class="btn">
-                                <button type="button" class="process">PROCESS</button><!-- .process end -->
-                                <button type="button" class="website">FIGMA</button><!-- .process end -->
-                            </div><!-- .btn end -->
-                        </div><!-- .text end -->
-                    </div><!-- .zoom-in-left end -->
-                </div>
-            </div><!-- .inner end -->
-        </div><!-- .project end -->
-
-        <div class="design">
+        <div class="design" id="design">
             <div class="inner">
                 <div class="text">
                     <p>Adobe Photoshop & Illustrator & Figma로 디자인한 작업물입니다.</p>
@@ -531,23 +490,39 @@
                     <div data-aos="zoom-in">
                         <div class="image_box">
                             <div class="first_wrap">
-                                <div class="item-01"></div><!-- .item-01 -->
-                                <div class="item-02"></div><!-- .item-01 -->
-                                <div class="item-03"></div><!-- .item-01 -->
+                                <div class="item-01">
+                                    <img src="img/04_design/cookie.jpg" alt="쿠키캐릭터">
+                                </div><!-- .item-01 -->
+                                <div class="item-02">
+                                    <img src="img/04_design/cookie.jpg" alt="쿠키캐릭터">
+                                </div><!-- .item-01 -->
+                                <div class="item-03">
+                                    <img src="img/04_design/cookie.jpg" alt="쿠키캐릭터">
+                                </div><!-- .item-01 -->
                             </div><!-- .fist_wrap end -->
                             <div class="second_wrap">
-                                <div class="item-01"></div><!-- .item-01 -->
+                                <div class="item-01">
+                                    <img src="img/04_design/cookie.jpg" alt="쿠키캐릭터">
+                                </div><!-- .item-01 -->
                                 <div class="item-02 tit">
                                     <h4>GRAPHIC
                                         <br>DESIGN
                                     </h4>
                                 </div><!-- .item-01 -->
-                                <div class="item-03"></div><!-- .item-01 -->
+                                <div class="item-03">
+                                    <img src="img/04_design/cookie.jpg" alt="쿠키캐릭터">
+                                </div><!-- .item-01 -->
                             </div><!-- .second_wrap end -->
                             <div class="third_wrap">
-                                <div class="item-01"></div><!-- .item-01 -->
-                                <div class="item-02"></div><!-- .item-01 -->
-                                <div class="item-03"></div><!-- .item-01 -->
+                                <div class="item-01">
+                                    <img src="img/04_design/cookie.jpg" alt="쿠키캐릭터">
+                                </div><!-- .item-01 -->
+                                <div class="item-02">
+                                    <img src="img/04_design/cookie.jpg" alt="쿠키캐릭터">
+                                </div><!-- .item-01 -->
+                                <div class="item-03">
+                                    <img src="img/04_design/cookie.jpg" alt="쿠키캐릭터">
+                                </div><!-- .item-01 -->
                             </div><!-- .third_wrap end -->
                         </div>
                     </div>
@@ -557,12 +532,10 @@
     </section>
 
     <footer>
-        <div class="contact">
+        <div class="contact" id="contact">
             <div class="inner">
                 <div class="text">
-                    <div data-aos="fade-down"
-                    data-aos-easing="linear"
-                    data-aos-duration="1500">
+                    <div data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1500">
                         <p>아직은 부족함이 많은 신입입니다. 하지만,
                             <br><span>배움의 열정으로 무한히 성장하는</span> 디자이너가 되겠습니다.
                         </p>
