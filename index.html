@@ -47,7 +47,7 @@
     </main>
 
     <section id="section">
-        <header class="header pc">
+        <header class="header">
             <div class="inner">
                 <h1 class="logo">
                     <a href="#intro">
@@ -55,7 +55,7 @@
                         <img class="white" src="img/logo2.png" alt="logo 2">
                     </a>
                 </h1><!-- .logo end -->
-                <nav class="nav">
+                <nav class="nav pc">
                     <ul class="gnb">
                         <li class="nav_about"><a href="#intro">Intro</a></li>
                         <li class="nav_about"><a href="#about">About</a></li>
@@ -63,7 +63,27 @@
                         <li class="nav_design"><a href="#design">Design</a></li>
                         <li class="nav_contact"><a href="#contact">Contact</a></li>
                     </ul>
-                </nav><!-- .nav end -->
+                </nav><!-- .nav pc end -->
+                <nav class="nav_mobile">
+                    <button type="button">MENU</button>
+                    <ul>
+                        <li>
+                            <a href="#intro">Intro</a>
+                        </li>
+                        <li>
+                            <a href="#about">About</a>
+                        </li>
+                        <li>
+                            <a href="#project">Project</a>
+                        </li>
+                        <li>
+                            <a href="#design">Design</a>
+                        </li>
+                        <li>
+                            <a href="#contact">Contact</a>
+                        </li>
+                    </ul>
+                </nav><!-- .mobile end -->
                 <div class="menu_bar">
                     <span>메뉴바</span>
                 </div><!-- .menu_bar end -->
@@ -189,7 +209,7 @@
                                         <li>
                                             <span>PAGE</span>
                                             <span>Main Page,</span>
-                                            <span><a href="#">Sub Page</a></span>
+                                            &nbsp;<span><a href="#">Sub Page</a></span>
                                         </li>
                                         <li>
                                             <span>TOOL</span>
@@ -202,8 +222,8 @@
                                     </ul>
                                 </div><!-- .info end -->
                                 <div class="btn">
-                                    <button type="button" class="process">PROCESS</button><!-- .process end -->
-                                    <button type="button" class="website">WEBSITE</button><!-- .process end -->
+                                    <button type="button" class="process" >PROCESS</button><!-- .process end -->
+                                    <button type="button" class="website"  onclick="window.open('https://koyookyung.github.io/VASOL/')">WEBSITE</button><!-- .process end -->
                                 </div><!-- .btn end -->
                             </div><!-- .text end -->
                         </div><!-- .zoom-in-left end -->
@@ -258,7 +278,7 @@
                                 </div><!-- .info end -->
                                 <div class="btn">
                                     <button type="button" class="process">PROCESS</button><!-- .process end -->
-                                    <button type="button" class="website">WEBSITE</button><!-- .process end -->
+                                    <button type="button" class="website" onclick="window.open('https://koyookyung.github.io/crocs/')">WEBSITE</button><!-- .process end -->
                                 </div><!-- .btn end -->
                             </div><!-- .text end -->
                         </div><!-- .zoom-in-left end -->
@@ -308,7 +328,7 @@
                                 </div><!-- .info end -->
                                 <div class="btn">
                                     <button type="button" class="process">PROCESS</button><!-- .process end -->
-                                    <button type="button" class="website">WEBSITE</button><!-- .process end -->
+                                    <button type="button" class="website" onclick="window.open('https://koyookyung.github.io/PaulBassett/')">WEBSITE</button><!-- .process end -->
                                 </div><!-- .btn end -->
                             </div><!-- .text end -->
                         </div><!-- .zoom-in-left end -->
@@ -357,7 +377,7 @@
                                     </ul>
                                 </div><!-- .info end -->
                                 <div class="btn">
-                                    <button type="button" class="website">WEBSITE</button><!-- .process end -->
+                                    <button type="button" class="website" onclick="window.open('https://koyookyung.github.io/Le-Jour/')">WEBSITE</button><!-- .process end -->
                                 </div><!-- .btn end -->
                             </div><!-- .text end -->
                         </div><!-- .zoom-in-left end -->
@@ -414,7 +434,7 @@
                                 </div><!-- .info end -->
                                 <div class="btn">
                                     <button type="button" class="process">PROCESS</button><!-- .process end -->
-                                    <button type="button" class="website">FIGMA</button><!-- .process end -->
+                                    <button type="button" class="website" onclick="window.open('https://www.figma.com/design/wiorPVMCGeGXPzcaYIGv1L/KT%EB%A9%A4%EB%B2%84%EC%8B%AD?node-id=0-1&p=f&t=9pxvD6LH1TlKyfo4-0')">FIGMA</button><!-- .process end -->
                                 </div><!-- .btn end -->
                             </div><!-- .text end -->
                         </div><!-- .zoom-in-left end -->
@@ -480,7 +500,7 @@
             </div><!-- .project end -->
         </div><!-- #project end -->
 
-        <div class="design pc" id="design">
+        <div class="design_pc" id="design">
             <div class="inner">
                 <div class="text">
                     <p>Adobe Photoshop & Illustrator & Figma로 디자인한 작업물입니다.</p>
@@ -529,6 +549,53 @@
                 </div><!-- .image_wrap end -->
             </div><!-- .inner end -->
         </div><!-- .design end -->
+        <div class="design_mobile" id="design">
+            <div class="inner">
+                <div class="text">
+                    <p>Adobe Photoshop & Illustrator & Figma로
+                        <br>디자인한 작업물입니다.</p>
+                    <span>클릭 시 이미지가 확대됩니다.</span>
+                </div><!-- .text end -->
+
+                <div data-aos="zoom-in">
+                    <div class="image_wrap">
+                        <div class="left_wrap">
+                            <div class="item-01">
+                                <img src="img/04_design/cookie.jpg" alt="쿠키캐릭터">
+                            </div><!-- .item-01 end -->
+                            <div class="item-02 tit">
+                                <h4>GRAPHIC
+                                    <br>DESIGN
+                                </h4>
+                            </div><!-- .item-02 end -->
+                            <div class="item-03">
+                                <img src="img/04_design/cookie.jpg" alt="쿠키캐릭터">
+                            </div><!-- .item-03 end -->
+                            <div class="item-04">
+                                <img src="img/04_design/cookie.jpg" alt="쿠키캐릭터">
+                            </div><!-- .item-04 end -->
+                        </div><!-- .left_wrap end -->
+                        <div class="right_wrap">
+                            <div class="item-01">
+                                <img src="img/04_design/cookie.jpg" alt="쿠키캐릭터">
+                            </div><!-- .item-01 end -->
+                            <div class="item-02">
+                                <img src="img/04_design/cookie.jpg" alt="쿠키캐릭터">
+                            </div><!-- .item-02 end -->
+                            <div class="item-03">
+                                <img src="img/04_design/cookie.jpg" alt="쿠키캐릭터">
+                            </div><!-- .item-03 end -->
+                            <div class="item-04">
+                                <img src="img/04_design/cookie.jpg" alt="쿠키캐릭터">
+                            </div><!-- .item-04 end -->
+                            <div class="item-05">
+                                <img src="img/04_design/cookie.jpg" alt="쿠키캐릭터">
+                            </div><!-- .item-05 end -->
+                        </div><!-- .right_wrap end -->
+                    </div><!-- .image_wrap end -->
+                </div><!-- .zoom in end -->
+            </div><!-- .inner end -->
+        </div><!-- .design_mobile end -->
     </section>
 
     <footer id="footer">
