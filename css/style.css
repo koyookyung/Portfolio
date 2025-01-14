@@ -27,6 +27,20 @@
     justify-content: space-between;
 }
 
+.intro .inner .qr_mobile {
+    display: flex;
+    justify-content: end;
+    text-align: center;
+    font-size: 16px;
+    margin-top: 5rem;
+    opacity: 1;
+    transition: 0.7s;
+}
+
+.intro .inner .qr_mobile .qr_wrap img {
+    width: 6rem;
+}
+
 .intro .inner .tit {
     font-family: 'WAGURI TTF';
     font-size: 14vw;
@@ -556,6 +570,7 @@
 .project .inner .btn .process {
     font-size: 18px;
     margin-right: 3rem;
+    color: #000;
 }
 
 .project .inner .btn .process:hover {
@@ -883,6 +898,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    text-align: center;
 }
 
 .design_pc .inner .image_wrap .image_box .second_wrap .tit h4 {
@@ -1697,6 +1713,10 @@
         row-gap: 15px;
         font-size: 16px;
     }
+    .intro .inner .qr_mobile {
+        opacity: 0;
+        transition: 0.7s;
+    }
     .intro .inner .tit {
         margin: 25rem 0;
     }
@@ -2023,6 +2043,7 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        text-align: center;
     }
     .design_mobile .inner .image_wrap .left_wrap .item-02 h4 {
         font-size: 18px;
