@@ -9,6 +9,13 @@ $(function () {
         $('html,body').animate({ scrollTop: $(this.hash).offset().top }, 500);
     });
 
+     //모바일 메뉴
+     $(function(){
+        $('.nav_mobile').click(function(){
+            $(this).find('ul').toggleClass('on')
+        })//nav_mobile.click()
+    });
+
     //메뉴바 이동
     let menuBar = $('.menu_bar');
     let menu = $('.nav .gnb li');
@@ -84,8 +91,6 @@ $(function () {
             })
         } 
     });//scroll()
-
-    
 
     //스킬 아이콘 호버 시 문장 나타남
     let skillIcon = $('.skill .icon li');
