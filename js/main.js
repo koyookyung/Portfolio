@@ -6,7 +6,7 @@ $(function () {
 
     //메뉴 클릭 시 스크롤 이동
     $('.header .nav .gnb li').click(function (e) {
-        $('html,body').animate({ scrollTop: $(this.hash).offset().top }, 500);
+        $('html,body').animate({ scrollTop: $(this.hash).offset().top }, 1000);
     });
 
      //모바일 메뉴
@@ -100,4 +100,8 @@ $(function () {
         $(skillText).removeClass('on')
         $(skillText).eq($(this).index()).addClass('on')
     });
+
+    Fancybox.bind("[data-fancybox]", {
+        // Your custom options
+      });
 });//script end
