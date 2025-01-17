@@ -548,7 +548,7 @@
     cursor: pointer;
 }
 
-.project .inner .right_box .text .info ul li:nth-child(2) span:nth-child(3)::before {
+.project .inner .right_box .text .info ul li:nth-child(2) a::before {
     content: '';
     background: url('../img/03_project/shotcut.png') center center / 100% no-repeat;
     width: 24px;
@@ -621,6 +621,24 @@
 
     50% {
         transform: translateY(-84%);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.crocs .inner .mokup .mobile .moblie_box:hover img {
+    animation: crocs_mobileSlide 12s infinite alternate ease-in-out;
+}
+
+@keyframes crocs_mobileSlide {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-83%);
     }
 
     100% {
