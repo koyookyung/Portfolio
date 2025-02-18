@@ -860,12 +860,18 @@
     max-height: 67.2rem;
     height: 44.68vw;
     background-color: #ddd;
+    overflow: hidden;
+}
+
+.design_pc .inner .image_wrap .image_box .first_wrap .item-01:hover img {
+    transform: scale(1.1);
 }
 
 .design_pc .inner .image_wrap .image_box .first_wrap .item-01 img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    transition: 0.7s;
 }
 
 .design_pc .inner .image_wrap .image_box .first_wrap .item-02 {
@@ -873,12 +879,18 @@
     max-height: 48rem;
     height: 32.04vw;
     background-color: #ddd;
+    overflow: hidden;
+}
+
+.design_pc .inner .image_wrap .image_box .first_wrap .item-02:hover img {
+    transform: scale(1.1);
 }
 
 .design_pc .inner .image_wrap .image_box .first_wrap .item-02 img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    transition: 0.7s;
 }
 
 .design_pc .inner .image_wrap .image_box .first_wrap .item-03 {
@@ -886,12 +898,18 @@
     max-height: 48rem;
     height: 32.04vw;
     background-color: #ddd;
+    overflow: hidden;
+}
+
+.design_pc .inner .image_wrap .image_box .first_wrap .item-03:hover img {
+    transform: scale(1.1);
 }
 
 .design_pc .inner .image_wrap .image_box .first_wrap .item-03 img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    transition: 0.7s;
 }
 
 .design_pc .inner .image_wrap .image_box .second_wrap {
@@ -906,12 +924,18 @@
     max-height: 48rem;
     height: 32.04vw;
     background-color: #ddd;
+    overflow: hidden;
+}
+
+.design_pc .inner .image_wrap .image_box .second_wrap .item-01:hover img {
+    transform: scale(1.1);
 }
 
 .design_pc .inner .image_wrap .image_box .second_wrap .item-01 img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    transition: 0.7s;
 }
 
 .design_pc .inner .image_wrap .image_box .second_wrap .tit {
@@ -935,12 +959,18 @@
     max-height: 48rem;
     height: 32.04vw;
     background-color: #ddd;
+    overflow: hidden;
+}
+
+.design_pc .inner .image_wrap .image_box .second_wrap .item-03:hover img {
+    transform: scale(1.1);
 }
 
 .design_pc .inner .image_wrap .image_box .second_wrap .item-03 img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    transition: 0.7s;
 }
 
 .design_pc .inner .image_wrap .image_box .third_wrap {
@@ -955,12 +985,18 @@
     max-height: 48rem;
     height: 32.04vw;
     background-color: #ddd;
+    overflow: hidden;
+}
+
+.design_pc .inner .image_wrap .image_box .third_wrap .item-01:hover img {
+    transform: scale(1.1);
 }
 
 .design_pc .inner .image_wrap .image_box .third_wrap .item-01 img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    transition: 0.7s;
 }
 
 .design_pc .inner .image_wrap .image_box .third_wrap .item-02 {
@@ -968,12 +1004,18 @@
     max-height: 48rem;
     height: 32.04vw;
     background-color: #ddd;
+    overflow: hidden;
+}
+
+.design_pc .inner .image_wrap .image_box .third_wrap .item-02:hover img {
+    transform: scale(1.1);
 }
 
 .design_pc .inner .image_wrap .image_box .third_wrap .item-02 img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    transition: 0.7s;
 }
 
 .design_pc .inner .image_wrap .image_box .third_wrap .item-03 {
@@ -981,12 +1023,18 @@
     max-height: 67.2rem;
     height: 44.68vw;
     background-color: #ddd;
+    overflow: hidden;
+}
+
+.design_pc .inner .image_wrap .image_box .third_wrap .item-03:hover img {
+    transform: scale(1.1);
 }
 
 .design_pc .inner .image_wrap .image_box .third_wrap .item-03 img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    transition: 0.7s;
 }
 
 /* contact -------------------------------------- */
